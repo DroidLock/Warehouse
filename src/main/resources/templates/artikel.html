@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ArtikelListe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+</head>
+<body style="padding: 2em;">
+<h1>ArtikelListe</h1>
+<table class="table table-dark" border="2">
+    <tr>
+        <th>Artikelnummer</th>
+        <th>Artikelname</th>
+        <th>Einheit</th>
+        <th>Preis</th>
+        <th>Lieferant</th>
+    </tr>
+    <tr th:each="artikel : ${artikel}">
+        <td th:text="${artikel.artikelnummer}"></td>
+        <td th:text="${artikel.artikelname}"></td>
+        <td th:text="${artikel.einheit}"></td>
+        <td th:text="${artikel.preis}"></td>
+        <td th:text="${artikel.lieferant.lieferant}"></td>
+    </tr>
+</table>
+</body>
+</html>
