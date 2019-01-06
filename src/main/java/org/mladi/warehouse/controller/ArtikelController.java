@@ -1,4 +1,4 @@
-package org.mladi.warehouse.bootstrap.controller;
+package org.mladi.warehouse.controller;
 
 import org.mladi.warehouse.repository.IArtikelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
