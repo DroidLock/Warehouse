@@ -46,7 +46,29 @@
 </nav>
 <div style="padding: 2em;">
 
-<h1>Test</h1>
+    <h1>Artikel Formular</h1>
+
+    <form class="form-group" action="#" th:action="@{/lieferant}">
+        <label>Artikelbezeichnung</label> <br>
+        <input type="text" name="artikelbezeichnung"><br/>
+        <label>Einheit</label> <br>
+        <input type="text" name="einheit"><br/>
+        <label>Preis</label> <br>
+        <input type="text" name="preis"> <br/>
+
+        <!--Dropdown für Lieferanten funktioniert nicht-->
+        <div style="padding-top: 1em">
+        <select class="form-control"> <br>
+            <!--<option value="0">Lieferanten auswahl</option>-->
+            <option th:each="artikel : ${artikel}"
+                    th:value="Lieferfant auswählen"
+                    th:text="${artikel.lieferant}"></option>
+        </select>
+        <br>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
 
 </div>
 </body>
