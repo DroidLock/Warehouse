@@ -48,19 +48,21 @@
 
     <h1>Artikel Formular</h1>
 
-    <form class="form-group" action="#" th:action="@{/lieferant}" method="post">
+    <form class="form-group" th:object="${artikel}" th:action="@{/addArtikel}" method="post">
         <label>Artikelbezeichnung</label> <br>
-        <input type="text" name="artikelbezeichnung"><br/>
+        <input type="text" th:field="*{artikelname}" id="name"><br/>
+        <span th:if="${#fields.hasErrors('artikelname')}" th:errors="*{artikelname}"></span>
         <label>Einheit</label> <br>
-        <input type="text" name="einheit"><br/>
+        <input type="text" th:field="*{einheit}"><br/>
+        <span th:if="${#fields.hasErrors('einheit')}" th:errors="*{einheit}"></span>
         <label>Preis</label> <br>
-        <input type="text" name="preis"> <br/>
+        <input type="text" th:field="*{preis}"> <br/>
+        <span th:if="${#fields.hasErrors('preis')}" th:errors="*{einheit}"></span>
 
 
         <div style="padding-top: 1em">
-        <select class="form-control" th:object="${lieferant}">
-            <option value="default">Lieferanten auswählen</option>
-            <option th:each="lieferant : ${lieferant}" th:text="${lieferant.lieferant}"></option>
+        <select class="form-control" th:field="${artikel.lieferant.lieferantenNr}">
+            <option th:each="l : ${lieferant}" th:text="${l.lieferantenName}" th:value="${l.lieferantenNr}"></option>
         </select>
         <br>
         </div>

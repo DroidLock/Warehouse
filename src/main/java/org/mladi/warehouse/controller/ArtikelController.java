@@ -19,7 +19,6 @@ public class ArtikelController {
     @RequestMapping("/artikel")
     public String getArtikel(Model model){
         model.addAttribute("artikel", iArtikelRepository.findAll());
-
         return "artikel";
     }
 }

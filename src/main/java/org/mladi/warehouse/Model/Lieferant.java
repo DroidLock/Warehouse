@@ -10,15 +10,15 @@ public class Lieferant {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long lieferantenNr;
-    private String lieferant;
+    private String lieferantenName;
 
 
     public Lieferant(){
 
     }
 
-    public Lieferant(String lieferant) {
-        this.lieferant = lieferant;
+    public Lieferant(String lieferantenName) {
+        this.lieferantenName = lieferantenName;
     }
 
     public long getLieferantenNr() {
@@ -29,12 +29,12 @@ public class Lieferant {
         this.lieferantenNr = lieferantenNr;
     }
 
-    public String getLieferant() {
-        return lieferant;
+    public String getLieferantenName() {
+        return lieferantenName;
     }
 
-    public void setLieferant(String lieferant) {
-        this.lieferant = lieferant;
+    public void setLieferantenName(String lieferantenName) {
+        this.lieferantenName = lieferantenName;
     }
 
 }

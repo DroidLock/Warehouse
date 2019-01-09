@@ -67,12 +67,12 @@
                     <th>Preis</th>
                     <th>Lieferant</th>
                 </tr>
-                <tr th:each="artikel : ${artikel}">
-                    <td th:text="${artikel.artikelnummer}"></td>
-                    <td th:text="${artikel.artikelname}"></td>
-                    <td th:text="${artikel.einheit}"></td>
-                    <td th:text="${artikel.preis}"></td>
-                    <td th:text="${artikel.lieferant.lieferant}"></td>
+                <tr th:each="a : ${artikel}">
+                    <td th:text="${a.artikelnummer}"></td>
+                    <td th:text="${a.artikelname}"></td>
+                    <td th:text="${a.einheit}"></td>
+                    <td th:text="${a.preis}"></td>
+                    <td th:text="${a.lieferant.getLieferantenName()}"></td>
                 </tr>
             </table>
         </div>

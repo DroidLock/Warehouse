@@ -19,7 +19,7 @@
 //    }
 //
 //    @RequestMapping("/addArtikel")
-//    public String getLieferant(Model model){
+//    public String getLieferantenName(Model model){
 //        model.addAttribute("lieferant", iLieferantenRepository.findAll());
 //
 //        return "addArtikel";

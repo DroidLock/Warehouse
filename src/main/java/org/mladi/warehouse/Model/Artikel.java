@@ -13,9 +13,7 @@ public class Artikel {
     @ManyToOne
     private Lieferant lieferant;
 
-public Artikel(){
 
-}
 
     public Artikel(String artikelname, String einheit, double preis, Lieferant lieferant) {
         this.artikelname = artikelname;
@@ -23,6 +21,10 @@ public Artikel(){
         this.preis = preis;
         this.lieferant = lieferant;
     }
+
+    public Artikel(){
+
+}
 
     public long getArtikelnummer() {
         return artikelnummer;
