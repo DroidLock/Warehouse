@@ -48,7 +48,7 @@
 
     <h1>Artikel Formular</h1>
 
-    <form class="form-group" action="#" th:action="@{/lieferant}">
+    <form class="form-group" action="#" th:action="@{/lieferant}" method="post">
         <label>Artikelbezeichnung</label> <br>
         <input type="text" name="artikelbezeichnung"><br/>
         <label>Einheit</label> <br>
@@ -56,13 +56,11 @@
         <label>Preis</label> <br>
         <input type="text" name="preis"> <br/>
 
-        <!--Dropdown für Lieferanten funktioniert nicht-->
+
         <div style="padding-top: 1em">
-        <select class="form-control"> <br>
-            <!--<option value="0">Lieferanten auswahl</option>-->
-            <option th:each="artikel : ${artikel}"
-                    th:value="Lieferfant auswählen"
-                    th:text="${artikel.lieferant}"></option>
+        <select class="form-control" th:object="${lieferant}">
+            <option value="default">Lieferanten auswählen</option>
+            <option th:each="lieferant : ${lieferant}" th:text="${lieferant.lieferant}"></option>
         </select>
         <br>
         </div>
