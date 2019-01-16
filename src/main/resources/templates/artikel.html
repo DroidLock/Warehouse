@@ -39,6 +39,8 @@
                     <td th:text="${a.einheit}"></td>
                     <td th:text="${a.preis}"></td>
                     <td th:text="${a.lieferant.getLieferantenName()}"></td>
+                    <td><a th:href="@{/artikel/{id}(id=${a.artikelnummer})}">Delete</a> </td>
+
                 </tr>
             </table>
         </div>

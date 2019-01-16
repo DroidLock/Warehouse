@@ -34,6 +34,6 @@ public class addArtikelController {
     public String addNewArtikel(Model model, @ModelAttribute Artikel artikel) {
         iArtikelRepository.save(artikel);
 //        model.addAttribute("lieferant", iLieferantenRepository.findById(artikel.getLieferant().getLieferantenNr()));
-        return "index";
+        return "artikel";
     }
 }
